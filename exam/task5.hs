@@ -1,7 +1,7 @@
 import Data.Maybe
 
-CheckBrackets :: String -> Bool
-CheckBrackets = func "" . filter (`elem` "()<>{}[]")
+ñheckBrack :: String -> Bool
+ñheckBrack = func "" . filter (`elem` "()<>{}[]")
      where func stack (c:cs) = if opening c
                                          then func (c:stack) cs
                                          else if (null stack || not (pair (head stack) c))
